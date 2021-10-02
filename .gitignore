@@ -1,3 +1,4 @@
 admin/.dbdata/
 main/.dbdata/
 /__pycache__/
+/env/
