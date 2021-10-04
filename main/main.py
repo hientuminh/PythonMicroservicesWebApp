@@ -6,7 +6,6 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import UniqueConstraint
 import requests
 
-from admin.products.producer import publish
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://root:root@db/main'
@@ -45,7 +44,7 @@ def likes(id):
     db.session.db(productUser)
     db.session.commit()
 
-    publish('product_liked', id)
+    # publish('product_liked', id)
   except:
     abort(400, 'You already like this product')
 
